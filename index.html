@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SoundWave — Music Player</title>
+  <meta name="viewport" content="width=1024" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="container">
+        <aside class="left-panel">
+      <header class="panel-header brand">
+        <img src="assets/logo.png" class="logo" />
+        <div>
+          <h2>SOUNDWAVE</h2>
+          <div class="small">Your music · Desktop</div>
+        </div>
+      </header>
+      <section class="library">
+        <h3>Library</h3>
+        <ul id="libraryList" class="list"></ul>
+      </section>
+      <section class="playlists">
+        <h3>Playlists</h3>
+        <div class="playlist-actions">
+          <input id="newPlaylistName" placeholder="New playlist name" />
+          <button id="btnCreatePlaylist">Create</button>
+        </div>
+        <ul id="playlistsList" class="list"></ul>
+      </section>
+    </aside>
+    <main class="center-panel" id="mainCenter">
+      <section class="player-area">
+        <div class="player-top">
+          <div class="cover"></div>
+          <div class="meta">
+            <div id="nowTitle" class="title">No track</div>
+            <div id="nowArtist" class="artist"></div>
+            <div id="nowAlbum" class="album"></div>
+            <div class="player-controls">
+              <button id="prevBtn" class="icon">⟨</button>
+              <button id="playBtn" class="play">Play</button>
+              <button id="nextBtn" class="icon">⟩</button>
+            </div>
+            <div class="timeline">
+              <span id="curTime">0:00</span>
+              <input id="seek" type="range" min="0" max="100" value="0" />
+              <span id="durTime">0:00</span>
+            </div>
+          </div>
+        </div>
+        <section class="queue">
+          <h4>Play Queue</h4>
+          <ul id="queueList" class="list"></ul>
+        </section>
+      </section>
+    </main>
+    <section id="playlistPage" class="playlist-page hidden">
+      <div class="playlist-header">
+        <button id="playlistBack" class="icon">⬅</button>
+        <h2 id="plTitle">Playlist</h2>
+        <select id="plSortSelect">
+          <option value="title">Title A-Z</option>
+          <option value="artist">Artist A-Z</option>
+          <option value="recent">Recently Added</option>
+        </select>
+      </div>
+      <ul id="playlistSongList" class="list"></ul>
+    </section>
+    <aside class="right-panel">
+      <section class="search">
+        <h3>Search</h3>
+        <input id="searchInput" placeholder="Search title/artist/album" />
+        <ul id="suggestions" class="suggestions"></ul>
+      </section>
+      <section class="recommendations">
+        <h3>Recommended</h3>
+        <ol id="recsList" class="list"></ol>
+      </section>
+      <section class="history">
+        <h3>History</h3>
+        <button id="clearHistory">Clear</button>
+        <ul id="historyList" class="list"></ul>
+      </section>
+    </aside>
+
+  </div>
+  <audio id="audio"></audio>
+  <div id="playlistMenu" class="popup-menu hidden"></div>
+  <script type="module" src="js/bootstrap.js"></script>
+</body>
+</html>

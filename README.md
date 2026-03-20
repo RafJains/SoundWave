@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# SoundWave
-=======
 # SOUNDWAVE — Frontend Music App (HTML/CSS/JS)
 
 A single-page, frontend-only music player demonstrating simple UI and explicit data-structure implementations (Trie, Binary Heap, Merge Sort). All data persists to `localStorage`. No external libs.
